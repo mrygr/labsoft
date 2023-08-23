@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'tienda.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default= 'postgres://tiendadb:lx19UZflpGDq0qzYvLl2P8HPe3nNtpRp@dpg-cjioje0cfp5c739j9iog-a.oregon-postgres.render.com/tienda_27tf',
+        default= 'postgres://tiendadb:lx19UZflpGDq0qzYvLl2P8HPe3nNtpRp@dpg-cjioje0cfp5c739j9iog-a/tienda_27tf',
         conn_max_age=600
 
     )
