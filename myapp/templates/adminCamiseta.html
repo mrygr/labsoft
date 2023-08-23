@@ -1,0 +1,25 @@
+{% if messages %}
+{% for message in messages %}
+    <strong class="text-dark">{{ message }}</strong>
+{% endfor %}
+{% endif %}
+
+
+<form action="/crearCamiseta/" enctype="multipart/form-data" method="POST">{% csrf_token %}
+    <div class="form-group">
+        <input type="text" name="inp_nombre" id="inp_nombre" class="form-control" placeholder="Nombre camiseta" value="" required>
+    </div>                    
+    <div class="form-group">
+        <textarea name="inp_descripcion" id="inp_descripcion" class="form-control" placeholder="Descripcion camiseta" value="" rows="4" cols="50" required></textarea>
+    </div>
+    <div class="form-group">    
+        <input type="number" min="0" step="1" name="inp_precio" id="inp_precio" placeholder="precio camiseta">
+    </div>
+    <div class="form-group">
+        <p>Imagen Camiseta</p>
+        <input type="file" name="inp_imagen" id="inp_imagen" class="form-control" required>
+    </div> 
+    <div class="form-group">                    
+        <button type="submit" class="btn btn-success btn-black text-white">Crear</button>
+    </div>                   
+</form>
