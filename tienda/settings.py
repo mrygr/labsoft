@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp'
+    'myapp',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -85,20 +86,20 @@ WSGI_APPLICATION = 'tienda.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
-  #  'default': {
-   #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-   #     'NAME': 'tienda',
-    #    'USER': 'postgres',
-    #    'PASSWORD': 'user',
-    #    'HOST': '127.0.0.1',
-    #    'DATABASE_PORT': '5432',
-    #}
-#}
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'tienda',
+        'USER': 'postgres',
+        'PASSWORD': 'user',
+        'HOST': '127.0.0.1',
+        'DATABASE_PORT': '5432',
+    }
+}'''
 
 DATABASES = {
     'default': dj_database_url.config(
-        default= 'postgres://tiendadb_d95y_user:Tib2ySHGqHPhTfsLIUAg2UciMuFiNGDX@dpg-cjj4i8337aks73avf8kg-a.oregon-postgres.render.com/tiendadb_d95y',
+        default= 'postgres://tiendadb_5jh0_user:mjJl4NAScmD0p7HsIHdW06Q7TYGu3BaM@dpg-cjj862mphtvs738t7tb0-a.oregon-postgres.render.com/tiendadb_5jh0',
         conn_max_age=600
 
     )
@@ -145,8 +146,11 @@ if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATIC_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+#MEDIA_URL = 'media/'
+#MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

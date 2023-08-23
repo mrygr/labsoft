@@ -10,4 +10,4 @@ urlpatterns = [
     path('productos/<id>', views.ver_camiseta),
     path('adminCamiseta/', views.adm_camiseta),
     path('crearCamiseta/', views.crear_camiseta),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
