@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}  
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrontEnd Store</title>
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="preconnect" href="{% static 'https://fonts.googleapis.com' %}">
-    <link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}" crossorigin>
-    <link href="{% static 'https://fonts.googleapis.com/css2?family=Staatliches&display=swap' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <header class="header">
-        <a href="/">
-            <img class="header__logo" src="{% static 'img/logo.png' %}" alt="Logotipo">
-        </a>
-    </header>
 
-    <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="/">Tienda</a>
-        <a class="navegacion__enlace" href="/nosotros">Nosotros</a> 
-    </nav>
+{% extends "./plantilla.html" %}
 
+{% block body %}
     <main class="contenedor">
         <h1>Nuestros Productos</h1>
         <div class="grid">
@@ -44,8 +22,5 @@
         </div>
 
     </main>
-    <footer class="footer">
-        <p class="footer__texto">Front End Store - Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+{% endblock%}
+
