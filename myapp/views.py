@@ -27,25 +27,8 @@ def ver_camiseta(request, id):
 
 #Administrador para acceder al formulario de creación de nueva camiseta
 def adm_camiseta(request):
-    if request.method == 'POST':
-        camiseta = Camiseta_form(request.POST, request.FILES)
-        if camiseta.is_valid:
-            
-            validacion = Camiseta.objects.filter(nombre = camiseta.fields)
-            print(camiseta.fields["nombre"])
 
-            if validacion:
-                messages.error(request, '¡La camiseta ya existe!')
-                return redirect('/adminCamiseta')        
-            else:            
-                camiseta.save()
-                messages.success(request, '¡Camiseta creada correctamente!')
-        else:
-            context = {'camiseta': camiseta}
-            return render(request, "adminCamiseta.html", context)
-    
-    context = {'camiseta': Camiseta_form()}
-    return render(request, "adminCamiseta.html", context)
+    return render(request, "adminCamiseta.html")
 
 
 #Permite crear una nueva camiseta. Verifica que no exista una camiseta con el mismo nombre 

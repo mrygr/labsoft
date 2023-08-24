@@ -99,12 +99,11 @@ WSGI_APPLICATION = 'tienda.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default= 'postgres://tiendadb_5jh0_user:mjJl4NAScmD0p7HsIHdW06Q7TYGu3BaM@dpg-cjj862mphtvs738t7tb0-a.oregon-postgres.render.com/tiendadb_5jh0',
+        default= 'postgres://tiendadb_kfvc_user:FAIYHmA7uwQPvYelcfncBFoLAutrjrMl@dpg-cjjad0mphtvs73chr1m0-a.oregon-postgres.render.com/tiendadb_kfvc',
         conn_max_age=600
 
     )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

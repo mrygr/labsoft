@@ -1,37 +1,11 @@
-{% load widget_tweaks %}
-
 {% if messages %}
 {% for message in messages %}
     <strong class="text-dark">{{ message }}</strong>
 {% endfor %}
 {% endif %}
 
-<form enctype="multipart/form-data" method="POST">
-    {% csrf_token %}
-    <div>
-        <p>Nombre camiseta</p>
-        {% render_field camiseta.nombre %}
-    </div>
 
-    <div>
-        <p>Descripcion camiseta</p>
-        {% render_field camiseta.descripcion %}
-    </div>
-
-    <div>
-        <p>Precio camiseta</p>
-        {% render_field camiseta.precio %}
-    </div>
-
-    <div>
-        <p>Imagen camiseta</p>
-        {% render_field camiseta.imagen %}
-    </div>    
-
-    <button type="submit" class="btn btn-success btn-black text-white">Crear</button>
-</form>
-
-<!--<form action="/crearCamiseta/" enctype="multipart/form-data" method="POST">{% csrf_token %}
+<form action="/crearCamiseta/" enctype="multipart/form-data" method="POST">{% csrf_token %}
     <div class="form-group">
         <input type="text" name="inp_nombre" id="inp_nombre" class="form-control" placeholder="Nombre camiseta" value="" required>
     </div>                    
@@ -48,4 +22,4 @@
     <div class="form-group">                    
         <button type="submit" class="btn btn-success btn-black text-white">Crear</button>
     </div>                   
-</form>-->
+</form>
